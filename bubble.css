@@ -1,0 +1,205 @@
+ html{
+     height:100%;
+     margin:0;
+     padding:0;
+     display:block;
+     
+ }
+
+ body {
+    background-size:50%;
+    background:palegreen;
+     font-family: 'Mario Party Hudson', sans-serif; 
+     animation: float 9s ease-in-out; infinite;
+
+ }
+
+ .wrapper {
+position:relative;
+background:palegreen;
+width:100%;
+height:50vh;
+display:flex;
+justify-content: center;
+align-items:center;
+z-index: -1;
+
+ }
+ .anime-circle {
+   width:30px;
+   height:30px;
+   border-radius:50%;
+   background:#fff;
+   position:absolute;
+ }
+
+.bubbleFlow {
+display:flex;
+}
+
+#bubblePNG {
+    position:relative;
+    mix-blend-mode: multiply;
+    background:transparent;
+    width:100%;
+    height:auto;
+}
+.bubbleFlow{
+    background: transparent;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 0px 0px 0px rgba(172,108,224,0.5);
+    overflow:hidden;
+    box-sizing:border-box;
+    border: 0px rgb(247, 133, 255) solid;
+    border-radius:0%;
+    
+}
+#moving {
+    background: transparent;
+   
+   
+}
+
+@keyframes float {
+0% {
+    box-shadow: 0 0px 0px 0px rgba(172,108,224,0.5); /* setting my keyframes for floating box */
+    transform: translatey(0px);
+}
+50% {
+    box-shadow: 0 0px 0px 0px rgba(172,108,224,0.2);
+    transform:translatey(-3.5vh);
+}
+100% {
+    box-shadow: 0 0px 0px 0px rgba(172,108,224,0.6);
+    transform:translatey(0px);
+    }
+}
+.bubble1 {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.bubble1 img {
+  position: relative;
+  animation: bubble1 4s, bubble1-img 6s;
+  animation-iteration-count: infinite;
+  max-height: 90px;
+}
+
+@keyframes bubble1 {
+  0% {
+    left: calc(10% - 88px);
+  }
+  49.99% {
+    left: 0%;
+  }
+  50% {
+    left: 0%;
+  }
+  99.99% {
+    left: calc(10% - 50px);
+  }
+  100% {
+    left: calc(30% - 88px);
+  }
+}
+
+
+
+
+
+#btnCount {
+margin-right: 5vh;
+background: green;
+color: #fff;
+border: 5px solid black;
+border-radius: 50%;
+box-shadow: 5px 5px 5px black;
+text-shadow: none;
+height: 15vh;
+width: 15vh;
+font-family: 'Mario Party Hudson', sans-serif;
+transition-duration: 0.4s;
+}
+#btnCount:after {
+position: absolute;
+display: block;
+left: 0;
+top: 0;
+border-radius: 4em;
+opacity: 0;
+transition: all 0.5s;
+box-shadow: 0 0 20vh 60vh mediumpurple;
+}
+#btnCount:active:after {
+left: 0;
+top: 0;
+border-radius: 4em;
+opacity: 1;
+transition: 0s;
+box-shadow: 0 0 0vh 0vh mediumpurple;
+}
+
+
+
+
+
+
+#btnCount:hover {
+background: limegreen;
+color: #fff;
+border: 5px solid black;
+border-radius: 50%;
+box-shadow: 5px 5px 5px black;
+text-shadow: none;
+height: 20vh;
+width: 20vh;
+font-size: 8vh;
+font-family: 'Mario Party Hudson', sans-serif;
+}
+#btnCountdown {
+background: darkred;
+color: #fff;
+border: 5px solid black;
+border-radius: 50%;
+box-shadow: 5px 5px 5px black;
+text-shadow: none;
+height: 15vh;
+width: 15vh;
+font-family: 'Mario Party Hudson', sans-serif;
+}
+#btnCountdown:hover {
+background: red;
+color: #fff;
+border: 5px solid black;
+border-radius: 50%;
+box-shadow: 5px 5px 5px black;
+text-shadow: none;
+height: 20vh;
+width: 20vh;
+font-size: 8vh;
+font-family: 'Mario Party Hudson', sans-serif;
+}
+.startButton {
+background: red;
+color: #fff;
+border: 1px solid black;
+border-radius: 1px;
+box-shadow: 5px 5px 5px #eee;
+text-shadow: none;
+}
+.startButton:hover {
+background: darkred;
+color: #fff;
+border: 1px solid black;
+border-radius: 1px;
+box-shadow: 5px 5px 5px #eee;
+text-shadow: none;
+}
+
+#lblShow {
+font-size: 50px;
+animation: float 4s ease-in-out infinite;
+outline: none;
+}
